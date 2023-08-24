@@ -1,0 +1,14 @@
+header {
+    background-color: rgb(245, 245, 245);
+};
+
+.header-wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+    &image {
+        max-width: 100%;
+        height: auto;
+    }
+}

@@ -1,5 +1,8 @@
-@use './global/reset';
 @use './global/global';
+@use './global/custom';
 @use './layout/header';
 @use './components/hero';
 @use './layout/footer';
+
+/* The following line can be included in a src/App.scss */
+// @import '~bootstrap/scss/bootstrap';

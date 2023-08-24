@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer>
+        <footer className="text-primary">
             <p>Copyright year</p>
             <p> Legal links: Privacy Policy, Terms and Conditions</p>
             <p>Page title</p>
