@@ -8,7 +8,7 @@ const Hero = () => {
             <Container>
                 <Row>
                     <Col>
-                        <p>Background Image and page title</p>
+                        <h1>Starry Nights and Desert Delights: Exploring California's National Parks</h1>
                     </Col>
                 </Row>
             </Container>
