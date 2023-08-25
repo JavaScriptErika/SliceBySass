@@ -1,14 +1,22 @@
-const Card = () => {
+
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+import Logo from '../../assets/BirdTreeLogo.svg'
+
+// No more than 4 cards in each row
+
+const Card = ({name, description, coordinates, activities, link}) => {
     return (
-        <section>
-            <p>No more than 4 cards in each row</p>
-            <p>Name of the park</p>
-            <p>Park description (can truncate)</p>
-            <p>Image</p>
-            <p>GPS coordinates</p>
-            <p>First 3 activies listed</p>
-            <p>Link to park page on NPS website</p>
-        </section>
+                <Col lg={3} className='rounded'>
+                    <Image src={Logo} alt="Bird tree logo" />
+                    <p>{name}</p>
+                    <p>{description}</p>
+                    <p>{coordinates}</p>
+                    <p>{activities}</p>
+                    <p>{link}</p>
+                </Col>
+  
+
     )
 }
 

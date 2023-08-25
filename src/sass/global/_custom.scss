@@ -7,5 +7,10 @@ $theme-colors: (
   'primary': orange,
 );
 
+
+p {
+    margin-bottom: 0rem;
+}
+
 /* import bootstrap to set changes */
 @import '~bootstrap/scss/bootstrap';
