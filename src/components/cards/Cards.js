@@ -1,16 +1,39 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Card from './Card'
-import NATIONAL_PARK_API_KEY from '../../apikey';
+import Spinner from 'react-bootstrap/Spinner';
+import { useGetNationalParks } from '../../hooks/useGetNationalParks';
 
 const Cards = () => {
+    const { data, isLoading, isError, error } = useGetNationalParks();
+    const { data: parks } = data ?? {};
+
+console.log(error)
+    if (isLoading) {
+        return <Spinner animation="border" />;
+    }
+
+    if (isError) {
+        return <p>There is an error! Oh no!!!!!</p>
+    }
+
     return (
         <Container>
-            <Row>            
-                <Card name={'Desert'} description="hefsefhwkjefhjk" coordinates={'123123'} activities={'3'} link={'www.google.com'}  />
-                <Card name={'Desert'} description="hefsefhwkjefhjk" coordinates={'123123'} activities={'3'} link={'www.google.com'}  />
-                <Card name={'Desert'} description="hefsefhwkjefhjk" coordinates={'123123'} activities={'3'} link={'www.google.com'}  />
-                <Card name={'Desert'} description="hefsefhwkjefhjk" coordinates={'123123'} activities={'3'} link={'www.google.com'}  />
+            <Row>
+            {parks.length > 0 ? 
+                parks.map(park => {
+                const imgUrl = park.images[0];
+             
+                    return (
+                        <Card 
+                            key={park.id}
+                            name={park.fullName} 
+                            description={park.description} 
+                            // coordinates={'123123'} 
+                            // activities={'3'} 
+                            link={park.url}  
+                        />
+                    )}) : null}          
             </Row>
 
         </Container>
