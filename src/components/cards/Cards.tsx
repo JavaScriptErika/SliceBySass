@@ -21,16 +21,17 @@ console.log(error)
     return (
         <Container>
             <Row>
-            {parks.length > 0 ? 
+            {parks && parks.length > 0 ? 
                 parks.map((park: any) => {
+                    console.log(park)
                     return (
                         <Card 
                             key={park.id}
                             name={park.fullName} 
                             description={park.description} 
-                            img={park.images[0]}
-                            coordinates={[{lat: park.latitude, long: park.longitude}]} 
-                            activities={park.activities} 
+                            img={park.images && park.images.length > 0 ? park.images[0] : null}
+                            coordinates={[park.latitude, park.longitude]} 
+                            // activities={park.activities} 
                             link={park.url}  
                         />
                     )}) : null}          
