@@ -31,7 +31,7 @@ console.log(error)
     }
 
     return (
-        <Container>
+        <Container className='mt-5'>
             <Row>
             {parks && parks.length > 0 ? 
                 parks.map((park: ParkItem) => {
