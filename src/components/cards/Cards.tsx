@@ -1,3 +1,4 @@
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Card from './Card'
@@ -21,15 +22,15 @@ console.log(error)
         <Container>
             <Row>
             {parks.length > 0 ? 
-                parks.map(park => {
+                parks.map((park: any) => {
                     return (
                         <Card 
                             key={park.id}
                             name={park.fullName} 
                             description={park.description} 
                             img={park.images[0]}
-                            coordinates={[parks.latitde, parks.longitute]} 
-                            activities={[park.activities]} 
+                            coordinates={[{lat: park.latitude, long: park.longitude}]} 
+                            activities={park.activities} 
                             link={park.url}  
                         />
                     )}) : null}          
