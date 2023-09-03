@@ -2,18 +2,22 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Banner from './Banner';
 
 const Hero = () => {
     return (
-        <section className="p-5 hero-wrapper rounded">
-            <Container>
-                <Row>
-                    <Col>
-                        <h1>Starry Nights and Desert Delights: Exploring California's National Parks</h1>
-                    </Col>
-                </Row>
-            </Container>
-        </section>
+        <>
+            <section className="py-5 hero-wrapper">
+                <Container>
+                    <Row>
+                        <Col lg={5} className='mt-5'>
+                            <h1>12 Amazing California National Parks</h1>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <Banner />
+        </>
     )
 }
 

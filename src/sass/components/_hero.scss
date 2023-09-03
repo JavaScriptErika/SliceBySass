@@ -1,5 +1,20 @@
 @use '../abstracts/colors.scss';
 
 .hero-wrapper {
-    color: colors.$offWhite;
+
+    height: 100vh;
+    background: url(../../assets/hero-yosemite.jpg) no-repeat top center;
+    background-color: colors.$brown;
+    background-size: cover;
+    color: colors.$white;
+
+    h1 {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: 900;
+        font-size: 4rem;
+        text-shadow: .1rem .09rem .1rem colors.$brown;
+    }
+    
 }
+
+// font-family: 'Figtree', sans-serif;
