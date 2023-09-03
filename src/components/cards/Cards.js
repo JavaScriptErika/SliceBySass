@@ -22,15 +22,14 @@ console.log(error)
             <Row>
             {parks.length > 0 ? 
                 parks.map(park => {
-                const imgUrl = park.images[0];
-             
                     return (
                         <Card 
                             key={park.id}
                             name={park.fullName} 
                             description={park.description} 
-                            // coordinates={'123123'} 
-                            // activities={'3'} 
+                            img={park.images[0]}
+                            coordinates={[parks.latitde, parks.longitute]} 
+                            activities={[park.activities]} 
                             link={park.url}  
                         />
                     )}) : null}          

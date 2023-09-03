@@ -19,3 +19,4 @@ export const useGetNationalParks = () => {
     return useQuery(['parksQuery'], getNationalParksData);
 }
 
+
