@@ -22,11 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "overrides": {
-<<<<<<< Updated upstream
     "@typescript-eslint/typescript-estree": "^5.57.1",
     "fork-ts-checker-webpack-plugin": "^6.5.3",
-=======
->>>>>>> Stashed changes
     "typescript": "^5.2.2"
   },
   "scripts": {
