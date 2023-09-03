@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@tanstack/react-query": "^4.33.0",
+    "@tanstack/gigry": "^4.33.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -22,8 +22,11 @@
     "web-vitals": "^2.1.4"
   },
   "overrides": {
+<<<<<<< Updated upstream
     "@typescript-eslint/typescript-estree": "^5.57.1",
     "fork-ts-checker-webpack-plugin": "^6.5.3",
+=======
+>>>>>>> Stashed changes
     "typescript": "^5.2.2"
   },
   "scripts": {
