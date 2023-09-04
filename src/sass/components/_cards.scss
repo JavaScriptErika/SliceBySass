@@ -1,5 +1,22 @@
-.card {
+@use '../abstracts/colors.scss';
+@use '../abstracts/mixins.scss' as *;
+
+.cards {
     h4 {
+        color: colors.$brown;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: 900;
         min-height: 3.75rem;
+    }
+
+    img {
+        height: 20rem;
+        object-fit: cover;
+    }
+}
+
+@each $color-name, $color-value in colors.$colors {
+    .card-#{$color-name} {
+        @include bg-style($color-value, $textColor: colors.$white);
     }
 }

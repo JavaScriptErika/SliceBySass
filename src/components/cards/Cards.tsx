@@ -16,6 +16,8 @@ interface ParkItem {
     url: string,
 }
 
+const colors = ['lime', 'green', 'orange', 'teal'];
+
 const Cards = () => {
     const { data, isLoading, isError, error } = useGetNationalParks();
     const { data: parks } = data ?? {};
@@ -34,11 +36,12 @@ console.log(error)
         <Container className='mt-5'>
             <Row>
             {parks && parks.length > 0 ? 
-                parks.map((park: ParkItem) => {
-                    console.log(park)
+                parks.map((park: ParkItem, index: number) => {
+                    const bgColorClass = `card-${colors[index % 4]}`
                     return (
                         <Card 
                             key={park.id}
+                            className={`${bgColorClass}`}
                             name={park.fullName} 
                             description={park.description} 
                             img={park.images && park.images.length > 0 ? park.images[0] : null}

@@ -1,0 +1,6 @@
+@use './colors.scss';
+
+@mixin bg-style($bgColor, $textColor: colors.$white) {
+    background-color: $bgColor;
+    color: $textColor;
+  }

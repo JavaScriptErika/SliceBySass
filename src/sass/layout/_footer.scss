@@ -3,3 +3,12 @@
 footer {
     background-color: $teal;
 }
+
+.social-list {
+    list-style-type: none;
+
+    .icon {
+        width: 2rem;
+        height: 2rem;
+    }
+}
