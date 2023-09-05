@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import Col from 'react-bootstrap/Col';
 import { truncateDescription, truncateToThreeDecimalPlaces} from '../../utils';
 import Image from 'react-bootstrap/Image';
@@ -19,7 +20,7 @@ const text = {
     placeholderAlt: 'Grey background with letter C and bird logo placeholder',
     activities: 'Activities:',
     coordinates: 'Coordinates:',
-    park: 'Go to Park Page'
+    link: 'Learn more'
 };
 
 const formatCoordinates = (lat: string, long: string): string => {
@@ -36,14 +37,16 @@ const formatCoordinates = (lat: string, long: string): string => {
 const Card = ({name, img, description, coordinates, activities, link, className}: CardProps) => {
     return (
         <Col md={6} className='cards d-flex flex-column mb-lg-3 my-4'>
-            <div className='p-3 flex-grow-1 d-flex rounded card-container'>
-                <div className='d-flex flex-column justify-content-between'>
+            <div className='p-3 flex-grow-1 d-flex flex-column rounded card-container'>
+                <div className='d-flex flex-column justify-content-between h-100'>
                     <div className='d-flex flex-column flex-xl-row rounded'>
-                        <Image 
-                            src={img ? img.url : Placeholder} 
-                            alt={img ? img.altText : `${text.placeholderAlt}`}
-                            className='img-fluid rounded'
-                        />  
+                        <LazyLoad width={'15rem'} height={'15rem'} threshold={0.95}>
+                            <Image 
+                                src={img ? img.url : Placeholder} 
+                                alt={img ? img.altText : `${text.placeholderAlt}`}
+                                className='rounded'
+                            />
+                        </LazyLoad>  
                         <div className='p-1 p-md-3'>
                             <h4 className='d-flex justify-content-center align-items-center text-center'>{name}</h4>
                             <div  className={`card-${className}-bar card-bar mx-auto mb-2 rounded`}  />
@@ -61,16 +64,19 @@ const Card = ({name, img, description, coordinates, activities, link, className}
                             )})}
                         </div>
                     : null}
-                    <div className='d-flex flex-column flex-lg-row align-items-lg-end justify-content-lg-between'>
+                    <div className='d-flex flex-column flex-lg-row mt-auto align-items-lg-center justify-content-between'>
                         <div className='d-flex flex-column flex-lg-row align-items-lg-center fw-bold'>
                             <p>{text.coordinates}</p>
                             <p className='border rounded p-1 m-1 bg-white'><Map /> {formatCoordinates(coordinates[0].lat, coordinates[0].long)}</p>
                         </div>
-                        <a href={link} className={`btn-${className}`} target="_blank" rel='noopener noreferrer' aria-label={`Go to ${name} website`}>{text.park}</a>
+                        <div className='my-4 mx-auto mx-lg-0'>
+                            <a href={link} className={`btn-${className}`} target="_blank" rel='noopener noreferrer' aria-label={`Go to ${name} website`}>{text.link}</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </Col>
+
 
 
     )
