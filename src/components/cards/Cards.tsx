@@ -33,26 +33,28 @@ console.log(error)
     }
 
     return (
-        <Container className='mt-5'>
-            <Row>
-            {parks && parks.length > 0 ? 
-                parks.map((park: ParkItem, index: number) => {
-                    const bgColorClass = `card-${colors[index % 4]}`
-                    return (
-                        <Card 
-                            key={park.id}
-                            className={`${bgColorClass}`}
-                            name={park.fullName} 
-                            description={park.description} 
-                            img={park.images && park.images.length > 0 ? park.images[0] : null}
-                            coordinates={[{lat: park.latitude, long: park.longitude}]} 
-                            activities={park.activities.slice(0,3)} 
-                            link={park.url}  
-                        />
-                    )}) : null}          
-            </Row>
-
-        </Container>
+        <section className='cards-section'>
+            <Container className='py-5'>
+                <Row>
+                    {parks && parks.length > 0 ? 
+                        parks.map((park: ParkItem, index: number) => {
+                            const boxShadowColorClass = `card-${colors[index % 4]}`
+                            return (
+                                <Card 
+                                    key={park.id}
+                                    className={`${boxShadowColorClass}`}
+                                    name={park.fullName} 
+                                    description={park.description} 
+                                    img={park.images && park.images.length > 0 ? park.images[0] : null}
+                                    coordinates={[{lat: park.latitude, long: park.longitude}]} 
+                                    activities={park.activities.slice(0,3)} 
+                                    link={park.url}  
+                                />
+                        )}) : null
+                    }          
+                </Row>
+            </Container>
+        </section>
     )
 }
 

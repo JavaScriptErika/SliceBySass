@@ -9,7 +9,7 @@ const Banner = () => {
             <Container>
                 <Row>
                     <Col className='text-center'>
-                        <h2>Come Explore!</h2>
+                        <h2>Come explore our beautiful lands!</h2>
                     </Col>
                 </Row>
             </Container>

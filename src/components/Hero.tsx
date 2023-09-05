@@ -10,7 +10,7 @@ const Hero = () => {
             <section className="py-5 hero-wrapper d-flex align-items-center">
                 <Container>
                     <Row>
-                        <Col lg={5} className='mt-5'>
+                        <Col md={6} lg={5} className='mt-5'>
                             <h1>California's 12 National Parks</h1>
                         </Col>
                     </Row>

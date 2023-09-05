@@ -1,18 +1,21 @@
-@use '../abstracts/colors.scss';
+@use '../abstracts/index' as *;
 
 .hero-wrapper {
 
     height: 70vh;
     background: url(../../assets/hero-yosemite.jpg) no-repeat top center;
-    background-color: colors.$brown;
+    background-color: $brown;
     background-size: cover;
-    color: colors.$white;
+    color: $white;
 
     h1 {
-        font-family: 'Hanken Grotesk', sans-serif;
+        @include font-style($heading-font, 4rem, $white );
         font-weight: 900;
-        font-size: 4rem;
-        text-shadow: .1rem .09rem .1rem colors.$brown;
+        text-shadow: .1rem .09rem .1rem $brown;
+
+        @include for-sm-mobile-only {    
+            font-size: 3.5rem; 
+         }
     }
     
 }

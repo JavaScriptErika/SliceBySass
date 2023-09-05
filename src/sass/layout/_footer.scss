@@ -4,6 +4,14 @@ footer {
     border-top: 1rem solid $teal;
     background-color: lighten($teal, 40%);
 
+    img {
+        max-width: 100%;
+        height: auto;
+        @include for-lg-laptop-up {    
+            max-width: 70%; 
+         }
+    }
+
     small {
         color: $brown;
     }
@@ -11,6 +19,7 @@ footer {
 
 .ul-special {
     @include unordered-list($orange);
+    font-size: 1.2rem;
 }
 
 .icon {

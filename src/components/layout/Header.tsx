@@ -10,7 +10,7 @@ const Header = () => {
         <header>
             <Container className='py-2'>
                 <Row>
-                    <Col xs={2}>
+                    <Col xs={6} md={4} lg={3} xl={2}>
                         <Image src={Logo} className='img-fluid' alt="Bird tree logo" />
                     </Col>
                 </Row>

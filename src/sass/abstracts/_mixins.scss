@@ -1,18 +1,22 @@
 @use './colors.scss';
 @use './fonts.scss' as *;
 
+// FONT STYLE
+
 @mixin font-style($font-family: $default-font, $font-size: $default-font-size, $font-color: $default-font-color) {
   font-family: $font-family;
   font-size: $font-size;
   color: $font-color;
 }
 
+// Background Style
 
 @mixin bg-style($bgColor, $textColor: colors.$white) {
     background-color: $bgColor;
     color: $textColor;
   }
 
+  // UNORDERED LIST
 
 @mixin unordered-list($color: colors.$white, $padding: 0rem, $margin: 0rem) {
   list-style-type: none;
@@ -30,5 +34,20 @@
     }
   }
 }
+
+// MEDIA QUERIES
+
+@mixin for-sm-mobile-only {
+  @media (max-width: 374px) { @content; }
+}
+
+@mixin for-lg-latop-down {
+  @media (max-width: 1199px) { @content; }
+}
+
+@mixin for-lg-laptop-up {
+  @media (min-width: 1200px) { @content; }
+}
+
 
 
