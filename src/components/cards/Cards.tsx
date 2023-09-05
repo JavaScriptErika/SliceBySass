@@ -1,8 +1,10 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Card from './Card'
-import Spinner from 'react-bootstrap/Spinner';
+// import Spinner from 'react-bootstrap/Spinner';
+// import Lottie from "lottie-react";
 import { useGetNationalParks } from '../../hooks/useGetNationalParks';
 
 interface ParkItem {
@@ -19,13 +21,20 @@ interface ParkItem {
 const colors = ['lime', 'green', 'orange', 'teal'];
 
 const Cards = () => {
-    const { data, isLoading, isError, error } = useGetNationalParks();
+    const { data, isLoading, isError } = useGetNationalParks();
     const { data: parks } = data ?? {};
 
-console.log(error)
 // TODO -- make this better
     if (isLoading) {
-        return <Spinner animation="border" />;
+        return (
+            <Container>
+                <Row>
+                    <Col>
+                        Loading...
+                    </Col>
+                </Row>
+            </Container>
+        )
     }
 
     if (isError) {

@@ -6,6 +6,12 @@ import Image from 'react-bootstrap/Image';
 import { Facebook, Linkedin, Instagram } from 'react-bootstrap-icons';
 import Logo from '../../assets/logo.png'
 
+const text = {
+    logoAlt: "California's 12 National Parks",
+    privacy: 'Privacy Policy',
+    terms: 'Terms and Conditions',
+    rights: 'All rights reserved.'
+}
 
 const getCurrentYear = () => new Date().getFullYear();
 
@@ -15,14 +21,14 @@ const Footer = () => {
             <Container>
                 <Row className='mb-5'>
                     <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 4}} lg={{span: 4, offset: 4}} className='text-center'>
-                        <Image src={Logo} alt="California's 12 National Parks"/>
+                        <Image src={Logo} alt={text.logoAlt}/>
                     </Col>
                 </Row>
                 <Row>
                     <Col xs={12} md={6} lg={9} xl={10} className='text-center text-md-start'>
                         <ul className='ul-special'>
-                            <li><a href='https://www.ziftrshop.com/policy/privacy' target="_blank" rel='noopener noreferrer'>Privacy Policy</a></li>
-                            <li><a href='https://www.ziftrshop.com/policy/terms-of-service' target="_blank" rel='noopener noreferrer'>Terms and Conditions</a></li>
+                            <li><a href='https://www.ziftrshop.com/policy/privacy' target="_blank" rel='noopener noreferrer'>{text.privacy}</a></li>
+                            <li><a href='https://www.ziftrshop.com/policy/terms-of-service' target="_blank" rel='noopener noreferrer'>{text.terms}</a></li>
                         </ul>
                     </Col>
                     <Col xs={{ span: 6, offset: 3 }} md={{ span: 4, offset: 2 }} lg={{ span: 3, offset: 0 }} xl={2}>
@@ -52,7 +58,7 @@ const Footer = () => {
                 </Row>
                 <Row>
                     <Col className='text-center text-md-start'>
-                        <small>&copy; {getCurrentYear()}, All rights reserved.</small>
+                        <small>&copy; {getCurrentYear()}, {text.rights}</small>
                     </Col>
                 </Row>
             </Container>

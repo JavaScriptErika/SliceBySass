@@ -4,6 +4,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Banner from './Banner';
 
+const text = {
+    title: "California's 12 National Parks"
+}
+
 const Hero = () => {
     return (
         <>
@@ -11,7 +15,7 @@ const Hero = () => {
                 <Container>
                     <Row>
                         <Col md={6} lg={5} className='mt-5'>
-                            <h1>California's 12 National Parks</h1>
+                            <h1>{text.title}</h1>
                         </Col>
                     </Row>
                 </Container>
