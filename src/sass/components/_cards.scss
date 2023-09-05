@@ -2,7 +2,7 @@
 @use '../abstracts/mixins.scss' as *;
 
 .cards-section {
-    background: linear-gradient(147deg, colors.$lime 0%, colors.$green 74%);    
+    background: linear-gradient(147deg, #f2f6ec 0%, #e9ffd0 74%);    
 }
 
 .cards {
@@ -10,6 +10,7 @@
         background-color: colors.$white;
         box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
     }
+
     h4 {
         color: colors.$brown;
         font-family: 'Hanken Grotesk', sans-serif;
@@ -17,11 +18,18 @@
         min-height: 3.75rem;
     }
 
+    .card-bar {
+        width: 5rem;
+        height: .3rem;
+       
+    }
+
     img {
         height: 15rem;
         width: 15rem;
         transform: translateX(-10%);
         object-fit: cover;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
         @include for-lg-latop-down {    
             transform: translate(0, -10%);
@@ -34,7 +42,7 @@
     // .card-#{$color-name} {
     //     @include bg-style($color-value, $textColor: colors.$white);
     // }
-    .card-#{$color-name}-img {
-        box-shadow: 4px -5px 24px 1px transparentize($color-value, .5);
+    .card-#{$color-name}-bar {
+        background-color: $color-value;
     }
 }

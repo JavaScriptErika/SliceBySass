@@ -1,2 +1,86 @@
+@use '../abstracts/colors.scss' as *;
+
+// Original source: https://codepen.io/bhautikbharadava/pen/OdPzdW
+
+@each $color-name, $color-value in $colors {
+
+    $borderProps: .3rem solid $color-value;
+
+    .btn-#{$color-name} {
+        contain: layout style paint;
+        position:relative;
+        padding: 1rem;
+        transition: all 500ms;
+
+        &:after,&:before {
+        content:" ";
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        transition: all 500ms;
+        }
+
+        &:after {
+        top: -.1rem;;
+        left: -.1rem;;
+        border-top: $borderProps;
+        border-left: $borderProps;
+        }
+
+        &:before {
+        bottom:-.1rem;
+        right:-.1rem;
+        border-bottom: $borderProps;
+        border-right: $borderProps;
+        }
+
+        &:hover {
+            &:before,&:after {
+            width:100%;
+            height:100%;
+        }
+    }
+}
+    
+}
 
 
+a.btn {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+// .btn {
+//     position:relative;
+//     padding: 1rem;
+//     transition: all 500ms;
+//     &:after,&:before{
+//         content:" ";
+//         width: 1rem;
+//         height: 1rem;
+//         position: absolute;
+//         transition: all 500ms;
+//     }
+//     &:after{
+//         top: -.1rem;;
+//         left: -.1rem;;
+//         border-top: $borderProps;
+//         border-left: $borderProps;
+//     }
+//     &:before{
+//         bottom:-.1rem;
+//         right:-.1rem;
+//         border-bottom: $borderProps;
+//         border-right: $borderProps;
+//     }
+//     &:hover{
+//         border-top-right-radius: 0rem;
+//         border-bottom-left-radius: 0rem;
+
+//         &:before,&:after{
+//         width:105%;
+//         height:115%;
+//         }
+//     }
+// }
+    

@@ -1,12 +1,10 @@
 @use '../abstracts/index' as *;
 
 .hero-wrapper {
-
     height: 70vh;
     background: url(../../assets/hero-yosemite.jpg) no-repeat top center;
     background-color: $brown;
     background-size: cover;
-    color: $white;
 
     h1 {
         @include font-style($heading-font, 4rem, $white );

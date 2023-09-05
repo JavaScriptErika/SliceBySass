@@ -1,5 +1,8 @@
+@use '../abstracts/colors.scss';
+
 header {
-    background-color: rgb(245, 245, 245);
+    background-color: colors.$offWhiteGreen;
+    border-bottom: .7rem solid colors.$darkGreen;
 };
 
 .header-wrapper {

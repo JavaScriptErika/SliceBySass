@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { Facebook, Linkedin, Instagram } from 'react-bootstrap-icons';
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/logo-light.png'
 
 const text = {
     logoAlt: "California's 12 National Parks",
@@ -26,7 +26,7 @@ const Footer = () => {
                 </Row>
                 <Row>
                     <Col xs={12} md={6} lg={9} xl={10} className='text-center text-md-start'>
-                        <ul className='ul-special'>
+                        <ul className='ul-special fw-semi-bold'>
                             <li><a href='https://www.ziftrshop.com/policy/privacy' target="_blank" rel='noopener noreferrer'>{text.privacy}</a></li>
                             <li><a href='https://www.ziftrshop.com/policy/terms-of-service' target="_blank" rel='noopener noreferrer'>{text.terms}</a></li>
                         </ul>
@@ -35,7 +35,7 @@ const Footer = () => {
                         <ul className='ul-special d-flex justify-content-between align-items-center'>
                             <li>
                                 <a href="https://www.facebook.com/AirTankNH/" aria-label="Facebook Page" target="_blank" rel='noopener noreferrer'>
-                                <Facebook className='icon' />
+                                    <Facebook className='icon' />
                                 </a>
                             </li>
                             <li>

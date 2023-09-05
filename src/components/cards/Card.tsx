@@ -42,10 +42,11 @@ const Card = ({name, img, description, coordinates, activities, link, className}
                         <Image 
                             src={img ? img.url : Placeholder} 
                             alt={img ? img.altText : `${text.placeholderAlt}`}
-                            className={`${className}-img img-fluid rounded`} 
+                            className='img-fluid rounded'
                         />  
                         <div className='p-1 p-md-3'>
                             <h4 className='d-flex justify-content-center align-items-center text-center'>{name}</h4>
+                            <div  className={`card-${className}-bar card-bar mx-auto mb-2 rounded`}  />
                             <p>{truncateDescription(description, 200)}</p>
                         </div>
                     </div>
@@ -65,7 +66,7 @@ const Card = ({name, img, description, coordinates, activities, link, className}
                             <p>{text.coordinates}</p>
                             <p className='border rounded p-1 m-1 bg-white'><Map /> {formatCoordinates(coordinates[0].lat, coordinates[0].long)}</p>
                         </div>
-                        <a href={link} target="_blank" rel='noopener noreferrer' aria-label={`Go to ${name} website`}>{text.park}</a>
+                        <a href={link} className={`btn-${className}`} target="_blank" rel='noopener noreferrer' aria-label={`Go to ${name} website`}>{text.park}</a>
                     </div>
                 </div>
             </div>

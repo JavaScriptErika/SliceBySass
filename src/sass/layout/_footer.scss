@@ -1,8 +1,8 @@
 @use '../abstracts/index' as *;
 
 footer {
-    border-top: 1rem solid $teal;
-    background-color: lighten($teal, 40%);
+    border-top: 1rem solid darken($teal, 10%);
+    background-color: $brown;
 
     img {
         max-width: 100%;
@@ -13,7 +13,7 @@ footer {
     }
 
     small {
-        color: $brown;
+        color: $white;
     }
 }
 
