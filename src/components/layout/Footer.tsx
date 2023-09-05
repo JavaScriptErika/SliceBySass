@@ -3,40 +3,56 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import { Facebook, Twitter, Linkedin, Instagram } from "react-bootstrap-icons";
+import { Facebook, Linkedin, Instagram } from "react-bootstrap-icons";
+import Logo from '../../assets/logo.png'
+
 
 const getCurrentYear = () => new Date().getFullYear();
 
 const Footer = () => {
     return (
-        <footer className="text-primary">
+        <footer className="text-primary py-5">
             <Container>
-                <Row>
-                    <Col className='text-center'>
-                        <Image src='' alt=''/>
+                <Row className='mb-5'>
+                    <Col xs={{span: 6, offset: 3}} md={{span: 4, offset: 4}} lg={{span: 2, offset: 5}} className='text-center'>
+                        <Image src={Logo} className='img-fluid' alt="California's 12 National Parks"/>
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={12} lg={10} className='text-center text-md-left'>
-                        <ul>
+                    <Col xs={12} md={6} lg={10} className='text-center text-md-start'>
+                        <ul className='ul-special'>
                             <li><a href='https://www.ziftrshop.com/policy/privacy'>Privacy Policy</a></li>
-                            <li><a href='https://www.ziftrshop.com/policy/terms-of-service'>Terms and Condtions</a></li>
-                            {/* <li className='d-none d-md-block'>&copy; {getCurrentYear()}, All rights reserved.</li> */}
+                            <li><a href='https://www.ziftrshop.com/policy/terms-of-service'>Terms and Conditions</a></li>
                         </ul>
                     </Col>
-                    <Col xs={12} lg={2} className='text-center text-md-left'>
-                        <ul className='social-list d-flex justify-content-between'>
-                            <li><a href="" aria-label="Facebook Page" target="_blank" rel='noopener noreferrer'><Facebook className='icon' /></a></li>
-                            <li><a href="" aria-label="Facebook Page" target="_blank" rel='noopener noreferrer'><Twitter className='icon' /></a></li>
-                            <li><a href="" aria-label="Facebook Page" target="_blank" rel='noopener noreferrer'><Instagram className='icon' /></a></li>
-                            <li><a href="" aria-label="Facebook Page" target="_blank" rel='noopener noreferrer'><Linkedin className='icon' /></a></li>
-                            {/* <li className='d-md-none'>&copy; {getCurrentYear()}, All rights reserved.</li> */}
+                    <Col xs={{ span: 6, offset: 3 }} md={{ span: 4, offset: 2 }} lg={{ span: 2, offset: 0 }}>
+                        <ul className='ul-special d-flex justify-content-between align-items-center'>
+                            <li>
+                                <a href="https://www.facebook.com/AirTankNH/" aria-label="Facebook Page" target="_blank" rel='noopener noreferrer'>
+                                <Facebook className='icon' />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/airtanknh/?hl=en" aria-label="Instagram page" target="_blank" rel='noopener noreferrer'>
+                                    <Instagram className='icon' />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/airtank/" aria-label="LinkedIn Page" target="_blank" rel='noopener noreferrer'>
+                                    <Linkedin className='icon' />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/AirTankNH" aria-label="Twitter Page" target="_blank" rel='noopener noreferrer'>
+                                    <div className='icon-unicode'>&#120143;</div>
+                                </a>
+                            </li>
                         </ul>
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
-                        <p>&copy; {getCurrentYear()}, All rights reserved.</p>
+                    <Col className='text-center text-md-start'>
+                        <small>&copy; {getCurrentYear()}, All rights reserved.</small>
                     </Col>
                 </Row>
             </Container>

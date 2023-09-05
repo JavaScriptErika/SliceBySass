@@ -1,14 +1,23 @@
-@use '../abstracts/' as *;
+@use '../abstracts/index' as *;
 
 footer {
-    background-color: $teal;
+    border-top: 1rem solid $teal;
+    background-color: lighten($teal, 40%);
+
+    small {
+        color: $brown;
+    }
 }
 
-.social-list {
-    list-style-type: none;
+.ul-special {
+    @include unordered-list($orange);
+}
 
-    .icon {
-        width: 2rem;
-        height: 2rem;
-    }
+.icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-unicode {
+    font-size: 2.5rem;
 }

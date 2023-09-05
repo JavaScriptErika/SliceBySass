@@ -7,11 +7,11 @@ import Banner from './Banner';
 const Hero = () => {
     return (
         <>
-            <section className="py-5 hero-wrapper">
+            <section className="py-5 hero-wrapper d-flex align-items-center">
                 <Container>
                     <Row>
                         <Col lg={5} className='mt-5'>
-                            <h1>12 Amazing California National Parks</h1>
+                            <h1>California's 12 National Parks</h1>
                         </Col>
                     </Row>
                 </Container>

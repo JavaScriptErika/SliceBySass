@@ -1,16 +1,13 @@
-/* The following block can be included in a custom.scss */
+// Bootstrap overrides
+@use '../abstracts/colors.scss';
+@use '../abstracts/fonts.scss';
 
-/* make the customizations */
-$theme-colors: (
-  'info': tomato,
-  'danger': teal,
-  'primary': orange,
-);
+$body-bg: colors.$offWhite;
+$body-color: colors.$brown;
 
+$font-family-base: fonts.$default-font;
 
-p {
-    margin-bottom: 0rem;
-}
+$paragraph-margin-bottom: 0rem;
 
 /* import bootstrap to set changes */
 @import '~bootstrap/scss/bootstrap';

@@ -46,7 +46,7 @@ console.log(error)
                             description={park.description} 
                             img={park.images && park.images.length > 0 ? park.images[0] : null}
                             coordinates={[{lat: park.latitude, long: park.longitude}]} 
-                            activities={park.activities.slice(0,2)} 
+                            activities={park.activities.slice(0,3)} 
                             link={park.url}  
                         />
                     )}) : null}          

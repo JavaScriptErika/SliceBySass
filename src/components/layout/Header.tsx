@@ -3,15 +3,15 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import Logo from '../../assets/BirdTreeLogo.svg'
+import Logo from '../../assets/logo.png'
 
 const Header = () => {
     return (
         <header>
-            <Container className='bg-white'>
+            <Container className='py-2'>
                 <Row>
-                    <Col lg={1}>
-                    <Image src={Logo} alt="Bird tree logo" />
+                    <Col xs={2}>
+                        <Image src={Logo} className='img-fluid' alt="Bird tree logo" />
                     </Col>
                 </Row>
 

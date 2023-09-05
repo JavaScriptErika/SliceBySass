@@ -29,13 +29,13 @@ const formatCoordinates = (lat: string, long: string): string => {
 const Card = ({name, img, description, coordinates, activities, link, className}: CardProps) => {
     // No more than 4 cards in each row
     return (
-                <Col xl={3} lg={4} md={6} className='cards'>
+                <Col xl={3} lg={4} md={6} className='cards d-flex flex-column mb-5'>
                     <h4 className='text-center d-flex justify-content-center align-items-center'>{name}</h4>
                     {img ? 
                         <Image src={img.url} alt={img.altText} className='img-fluid' /> : 
                         <Image src={Placeholder} className='img-fluid' alt={`Grey background with letter C and bird logo placeholder for ${name}`} /> 
                     }
-                    <div className={`${className} p-3`}>
+                    <div className={`${className} p-3 flex-grow-1`}>
                         <p>{truncateDescription(description, 150)}</p>
                         <p>{formatCoordinates(coordinates[0].lat, coordinates[0].long)}</p>
                         {activities && activities.length > 0 ? 
