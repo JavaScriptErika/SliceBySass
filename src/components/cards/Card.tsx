@@ -42,14 +42,17 @@ const Card = ({name, img, description, coordinates, activities, link, className}
             <div className='p-3 flex-grow-1 d-flex flex-column rounded card-container'>
                 <div className='d-flex flex-column justify-content-between h-100'>
                     <div className='d-flex flex-column flex-xl-row rounded'>
-                        {/* Image, title and description areas, LazyLoad for performance-- images are huge! */}
-                        <LazyLoad width={'15rem'} height={'15rem'} threshold={0.95}>
-                            <Image 
-                                src={img ? img.url : Placeholder} 
-                                alt={img ? img.altText : `${text.placeholderAlt}`}
-                                className='rounded'
-                            />
-                        </LazyLoad>  
+                        {/* prevents layout shifting*/}
+                        <div className='lazyload-wrapper'> 
+                          {/* Image, title and description areas, LazyLoad for performance-- images are huge! */}
+                            <LazyLoad width={'15rem'} height={'15rem'} threshold={0.95}>
+                                <Image 
+                                    src={img ? img.url : Placeholder} 
+                                    alt={img ? img.altText : `${text.placeholderAlt}`}
+                                    className='rounded'
+                                />
+                            </LazyLoad>
+                        </div>  
                         <div className='p-1 p-md-3'>
                             <h4 className='d-flex justify-content-center align-items-center text-center'>{name}</h4>
                             <div  className={`card-${className}-bar card-bar mx-auto mb-2 rounded`}  />

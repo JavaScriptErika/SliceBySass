@@ -1,6 +1,9 @@
 @use '../abstracts/colors.scss' as *;
 @use '../abstracts/mixins.scss' as *;
 
+$imgHeight: 15rem;
+$imgWidth: 15rem;
+
 .cards-section {
     background: linear-gradient(147deg, #f2f6ec 0%, #e9ffd0 74%);    
 }
@@ -24,6 +27,11 @@
        
     }
 
+    .lazyLoad-wrapper {
+        width: $imgWidth;
+        height: $imgHeight;
+    }
+
     .LazyLoad {
         opacity: 0;
         transition: all 1s ease-in-out;
@@ -35,8 +43,8 @@
       }
 
     img {
-        height: 15rem;
-        width: 15rem;
+        height: $imgHeight;
+        width: $imgHeight;
         transform: translateX(-10%);
         object-fit: cover;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
