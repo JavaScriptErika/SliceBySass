@@ -1,7 +1,7 @@
-@use './colors.scss';
+@use './colors.scss' as *;
 
 $default-font: 'Figtree', sans-serif;
 $heading-font: 'Hanken Grotesk', sans-serif;
 $default-font-size: 1rem;
-$default-font-color: colors.$brown;
+$default-font-color: $brown;
 

@@ -8,11 +8,14 @@ import rainAnimation from '../assets/lottie/rainCloudBikeAnimation.json';
 
 
 type AnimationType = 'tree' | 'rain';
-
 interface LoadingAnimationProps {
   animationType: AnimationType;
   showText?: boolean;
   text?: string;
+}
+
+const message = {
+    loading : 'Loading...'
 }
 
 const animations = {
@@ -20,7 +23,7 @@ const animations = {
   'rain': rainAnimation,
 };
 
-const LoadingAnimation = ({ animationType, showText=true, text = 'Loading...' }: LoadingAnimationProps) => {
+const LoadingAnimation = ({ animationType, showText=true, text=message.loading }: LoadingAnimationProps) => {
   const lottieFile = animations[animationType];
 
   return (

@@ -1,8 +1,8 @@
-@use '../abstracts/colors.scss';
+@use '../abstracts/colors.scss' as *;
 
 header {
-    background-color: colors.$offWhiteGreen;
-    border-bottom: .7rem solid colors.$darkGreen;
+    background-color: $offWhiteGreen;
+    border-bottom: .7rem solid $darkGreen;
 };
 
 .header-wrapper {

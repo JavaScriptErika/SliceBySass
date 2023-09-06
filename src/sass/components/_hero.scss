@@ -7,7 +7,7 @@
     background-size: cover;
 
     h1 {
-        @include font-style($heading-font, 4rem, $white );
+        @include font-style($heading-font, 4rem, $white);
         font-weight: 900;
         text-shadow: .1rem .09rem .1rem $brown;
 

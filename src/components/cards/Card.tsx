@@ -36,10 +36,12 @@ const formatCoordinates = (lat: string, long: string): string => {
 
 const Card = ({name, img, description, coordinates, activities, link, className}: CardProps) => {
     return (
+        // Layout and styling for each card
         <Col md={6} className='cards d-flex flex-column mb-lg-3 my-4'>
             <div className='p-3 flex-grow-1 d-flex flex-column rounded card-container'>
                 <div className='d-flex flex-column justify-content-between h-100'>
                     <div className='d-flex flex-column flex-xl-row rounded'>
+                        {/* Image, title and description areas, LazyLoad for performance-- images are huge! */}
                         <LazyLoad width={'15rem'} height={'15rem'} threshold={0.95}>
                             <Image 
                                 src={img ? img.url : Placeholder} 
@@ -53,6 +55,7 @@ const Card = ({name, img, description, coordinates, activities, link, className}
                             <p>{truncateDescription(description, 200)}</p>
                         </div>
                     </div>
+                    {/* Activities section */}
                     {activities && activities.length > 0 ? 
                         <div className='d-flex flex-column flex-lg-row flex-lg-wrap my-2 align-items-lg-center fw-bold'>
                             <p>{text.activities}</p>
@@ -64,6 +67,7 @@ const Card = ({name, img, description, coordinates, activities, link, className}
                             )})}
                         </div>
                     : null}
+                    {/* Coordinates and link */}
                     <div className='d-flex flex-column flex-lg-row mt-auto align-items-lg-center justify-content-between'>
                         <div className='d-flex flex-column flex-lg-row align-items-lg-center fw-bold'>
                             <p>{text.coordinates}</p>
@@ -76,9 +80,6 @@ const Card = ({name, img, description, coordinates, activities, link, className}
                 </div>
             </div>
         </Col>
-
-
-
     )
 }
 

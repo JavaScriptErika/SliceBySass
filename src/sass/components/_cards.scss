@@ -1,4 +1,4 @@
-@use '../abstracts/colors.scss';
+@use '../abstracts/colors.scss' as *;
 @use '../abstracts/mixins.scss' as *;
 
 .cards-section {
@@ -7,12 +7,12 @@
 
 .cards {
     .card-container {
-        background-color: colors.$white;
+        background-color: $white;
         box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
     }
 
     h4 {
-        color: colors.$brown;
+        color: $brown;
         font-family: 'Hanken Grotesk', sans-serif;
         font-weight: 900;
         min-height: 3.75rem;
@@ -47,10 +47,9 @@
     }
 }
 
-@each $color-name, $color-value in colors.$colors {
-    // .card-#{$color-name} {
-    //     @include bg-style($color-value, $textColor: colors.$white);
-    // }
+// class is dynamically created in map loop in <Cards />, 
+// then we loop over the map in _colors.scss
+@each $color-name, $color-value in $colors {
     .card-#{$color-name}-bar {
         background-color: $color-value;
     }

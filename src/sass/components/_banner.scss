@@ -1,12 +1,9 @@
-@use '../abstracts/colors.scss';
+@use '../abstracts/index' as *;
 
 .banner {
-    background-color: colors.$darkGreen;
-
+    @include bg-style($darkGreen, $white);
     h2 {
-        font-family: 'Hanken Grotesk', sans-serif;
+        @include font-style($heading-font, 2.5rem, $white);
         font-weight: 900;
-        font-size: 2.5rem;
-        color: colors.$white;
     }
 }

@@ -20,10 +20,13 @@ const text = {
     errorMsg: 'Looks like we got caught in the rain. Try again later.'
 }
 
+// used to cycle through colors for buttons and colored bar
 const colors = ['lime', 'green', 'orange', 'teal'];
 
 const Cards = () => {
+    // Fetch national park data from our hook, handle loading and errors
     const { data, isLoading, isError } = useGetNationalParks();
+
     // parks defaults to empty array if data is null or undefined
     const { data: parks = []} = data ?? {};
 
@@ -42,6 +45,7 @@ const Cards = () => {
                     <Suspense fallback={<LoadingAnimation animationType='tree' />}>
                         {parks && parks.length > 0 ? 
                             parks.map((park: ParkItem, index: number) => {
+                                // Dynamically assign color classes
                                 const colorClass = `${colors[index % 4]}`
                                 return (
                                     <Card 

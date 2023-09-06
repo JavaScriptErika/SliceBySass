@@ -2,6 +2,7 @@
 
 // Original source: https://codepen.io/bhautikbharadava/pen/OdPzdW
 
+// then loop over map in _colors.scss
 @each $color-name, $color-value in $colors {
 
     $borderProps: .3rem solid $color-value;
@@ -43,14 +44,7 @@
             &:before,&:after {
             width:105%;
             height:115%;
+            }
         }
     }
-}
-    
-}
-
-
-a.btn {
-    font-weight: bold;
-    text-decoration: none;
 }

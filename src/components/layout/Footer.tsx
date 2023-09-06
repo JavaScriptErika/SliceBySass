@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ElementType } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,6 +15,37 @@ const text = {
     rights: 'All rights reserved.'
 }
 
+interface SocialMediaIconType {
+    href: string,
+    ariaLabel: string,
+    IconComponent: ElementType
+}
+
+const SocialMediaIcon = ({ href, ariaLabel, IconComponent }: SocialMediaIconType) => (
+    <li>
+        <a href={href} aria-label={ariaLabel} target="_blank" rel="noopener noreferrer">
+            <IconComponent className='icon' />
+        </a>
+    </li>
+);
+    const socialMediaData = [
+        {
+            href: "https://www.facebook.com/AirTankNH/",
+            ariaLabel: "Facebook Page",
+            IconComponent: Facebook,
+        },
+        {
+            href: "https://www.instagram.com/airtanknh/?hl=en",
+            ariaLabel: "Instagram page",
+            IconComponent: Instagram,
+        },
+        {
+            href: "https://www.linkedin.com/company/airtank/",
+            ariaLabel: "LinkedIn Page",
+            IconComponent: Linkedin,
+        },
+    ];
+
 const getCurrentYear = () => new Date().getFullYear();
 
 const Footer = () => {
@@ -29,29 +60,24 @@ const Footer = () => {
                         </Col>
                     </Row>
                     <Row>
+                        {/* Privacy and terms */}
                         <Col xs={12} md={6} lg={9} xl={10} className='text-center text-md-start'>
                             <ul className='ul-special fw-semi-bold'>
                                 <li><a href='https://www.ziftrshop.com/policy/privacy' target="_blank" rel='noopener noreferrer'>{text.privacy}</a></li>
                                 <li><a href='https://www.ziftrshop.com/policy/terms-of-service' target="_blank" rel='noopener noreferrer'>{text.terms}</a></li>
                             </ul>
                         </Col>
+                        {/* Social Media */}
                         <Col xs={{ span: 6, offset: 3 }} md={{ span: 4, offset: 2 }} lg={{ span: 3, offset: 0 }} xl={2}>
                             <ul className='ul-special d-flex justify-content-between align-items-center'>
-                                <li>
-                                    <a href="https://www.facebook.com/AirTankNH/" aria-label="Facebook Page" target="_blank" rel='noopener noreferrer'>
-                                        <Facebook className='icon' />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/airtanknh/?hl=en" aria-label="Instagram page" target="_blank" rel='noopener noreferrer'>
-                                        <Instagram className='icon' />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/company/airtank/" aria-label="LinkedIn Page" target="_blank" rel='noopener noreferrer'>
-                                        <Linkedin className='icon' />
-                                    </a>
-                                </li>
+                            {socialMediaData.map((item, index) => (
+                                <SocialMediaIcon
+                                    key={index}
+                                    href={item.href}
+                                    ariaLabel={item.ariaLabel}
+                                    IconComponent={item.IconComponent}
+                                />
+                            ))}
                                 <li>
                                     <a href="https://twitter.com/AirTankNH" aria-label="Twitter Page" target="_blank" rel='noopener noreferrer'>
                                         <div className='icon-unicode'>&#120143;</div>
@@ -61,6 +87,7 @@ const Footer = () => {
                         </Col>
                     </Row>
                     <Row>
+                        {/* Copyright */}
                         <Col className='text-center text-md-start'>
                             <small>&copy; {getCurrentYear()}, {text.rights}</small>
                         </Col>
