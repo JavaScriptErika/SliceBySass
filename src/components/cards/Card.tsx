@@ -31,7 +31,8 @@ const formatCoordinates = (lat: string, long: string): string => {
     const longDirection = truncatedLong > 0 ? 'E' : 'W';
 
     // Math.abs() so we're not displaying negative signs
-    return `${Math.abs(truncatedLat)} ${latDirection} ${Math.abs(truncatedLong)} ${longDirection}`;
+    // toFixed(3) to account for trailing zeros
+    return `${Math.abs(truncatedLat).toFixed(3)} ${latDirection} ${Math.abs(truncatedLong).toFixed(3)} ${longDirection}`;
 }
 
 const Card = ({name, img, description, coordinates, activities, link, className}: CardProps) => {

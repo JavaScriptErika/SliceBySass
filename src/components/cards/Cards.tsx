@@ -30,10 +30,11 @@ const Cards = () => {
     // parks defaults to empty array if data is null or undefined
     const { data: parks = []} = data ?? {};
 
+    // (!isLoading) to see the tree!
     if (isLoading) {
         return <LoadingAnimation animationType='tree' showText={false} />;
     }
-
+    // (!isError) to see the bike and rain
     if (isError) {
         return <LoadingAnimation animationType='rain' text={text.errorMsg} />;
     }
