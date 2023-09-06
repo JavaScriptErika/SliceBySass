@@ -20,7 +20,7 @@ const animations = {
   'rain': rainAnimation,
 };
 
-const LoadingAnimation = ({ animationType, showText = true, text = 'Loading...' }: LoadingAnimationProps) => {
+const LoadingAnimation = ({ animationType, showText=true, text = 'Loading...' }: LoadingAnimationProps) => {
   const lottieFile = animations[animationType];
 
   return (
@@ -28,7 +28,7 @@ const LoadingAnimation = ({ animationType, showText = true, text = 'Loading...' 
       <Row>
         <Col className='py-4' sm={{ span: 4, offset: 4 }}>
           <Lottie animationData={lottieFile} />
-          {showText && <p className='fw-bold text-center'>{text}</p>}
+          {showText ? <p className='fw-bold text-center'>{text}</p> : null}
         </Col>
       </Row>
     </Container>

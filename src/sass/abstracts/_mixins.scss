@@ -41,6 +41,10 @@
   @media (max-width: 374px) { @content; }
 }
 
+@mixin for-tablet-to-laptop {
+  @media (min-width: 768px) and (max-width: 1024px) { @content; }
+}
+
 @mixin for-lg-latop-down {
   @media (max-width: 1199px) { @content; }
 }
