@@ -5,6 +5,9 @@
 
 To run the project locally, clone the repo, run `npm install` and then `npm start`.
 
+
+<img src="https://github.com/JavaScriptErika/NationalPark/assets/19316487/041a0659-2c3c-4309-80aa-35aeb2450503"  width="800"/>
+
 ---
 
 ## 🛠️ The Toolbox
@@ -30,7 +33,7 @@ _All this deployed with ❤️ on Netlify!_
 <img src="https://github.com/JavaScriptErika/NationalPark/assets/19316487/715908ad-d37c-4973-8b9a-b510afb46f61"  width="400"/>
 
 It started off with this bird perched on a branch (see very right). I chose this logo with vibrant greens and earthy browns to echo California's dynamic scenery. 🌳🏜️
-I further adapted the logo in Photoshop!
+I further adapted the logo in Illustrator!
 
 ### 🖼️ A Little Something Extra
 
