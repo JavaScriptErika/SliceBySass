@@ -1,8 +1,6 @@
 import React, { lazy, Suspense } from 'react';import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-// import Spinner from 'react-bootstrap/Spinner';
-// import Lottie from "lottie-react";
+import LoadingAnimation from '../LoadingAnimation';
 import { useGetNationalParks } from '../../hooks/useGetNationalParks';
 
 const Card = lazy(() => import('./Card'));
@@ -18,34 +16,30 @@ interface ParkItem {
     url: string,
 }
 
+const text = {
+    errorMsg: 'Looks like we got caught in the rain. Try again later.'
+}
+
 const colors = ['lime', 'green', 'orange', 'teal'];
 
 const Cards = () => {
     const { data, isLoading, isError } = useGetNationalParks();
-    const { data: parks } = data ?? {};
+    // parks defaults to empty array if data is null or undefined
+    const { data: parks = []} = data ?? {};
 
-// TODO -- make this better
     if (isLoading) {
-        return (
-            <Container>
-                <Row>
-                    <Col>
-                        Loading...
-                    </Col>
-                </Row>
-            </Container>
-        )
+        return <LoadingAnimation animationType='tree' showText={false} />;
     }
 
     if (isError) {
-        return <p>There is an error! Oh no!!!!!</p>
+        return <LoadingAnimation animationType='rain' text={text.errorMsg} />;
     }
 
     return (
         <section className='cards-section'>
             <Container className='py-5'>
                 <Row>
-                    <Suspense fallback={<div>Loading Cards...</div>}>
+                    <Suspense fallback={<LoadingAnimation animationType='tree' />}>
                         {parks && parks.length > 0 ? 
                             parks.map((park: ParkItem, index: number) => {
                                 const colorClass = `${colors[index % 4]}`
