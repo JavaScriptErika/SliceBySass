@@ -1,72 +1,65 @@
+
+# 🌲🏞️ Welcome to the coding project for California's National Parks!
+
+**Hey, explorers!** The project is live! 🚀 You can check it out [right here](https://californianationalparks.netlify.app/). 
+
+To run the project locally, clone the repo, run `npm install` and then `npm start`.
+
+---
+
+## 🛠️ The Toolbox
+
+- **React**: The building blocks of our UI.
+- **TypeScript**: For that extra layer of type safety.
+- **Sass**: Making our styles modular and maintainable.
+- **Bootstrap**: Responsiveness out of the box! 📦
+- **React Query**: A fantastic toolkit for fetching, caching, and more!
+- **Lottie Animations**: Because life’s too short for boring loading spinners!
+
+_All this deployed with ❤️ on Netlify!_
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4f64523f-075b-45a7-be5a-7c99b9a60dc7/deploy-status)](https://app.netlify.com/sites/idyllic-kataifi-6923d9/deploys)
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎨 The Look and Feel
 
-### `npm start`
+### 🐦 The Logo 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="https://github.com/JavaScriptErika/NationalPark/assets/19316487/715908ad-d37c-4973-8b9a-b510afb46f61"  width="400"/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+It started off with this bird perched on a branch (see very right). I chose this logo with vibrant greens and earthy browns to echo California's dynamic scenery. 🌳🏜️
+I further adapted the logo in Photoshop!
 
-### `npm test`
+### 🖼️ A Little Something Extra
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://github.com/JavaScriptErika/NationalPark/assets/19316487/a39495bd-5b16-4a24-a2dc-05c30d9b1c56" alt="Untitled-1" width="400"/>
 
-### `npm run build`
+I created a placeholder image with the logo to reinforce branding. Love a stamped effect!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🪶 React Query for the Win
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+With React Query, the API interaction is a breeze. Loading and error states included!
 
-### `npm run eject`
+### 📦 Lazy Like a Sunday Morning
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React's built-in lazy loading helps keep things snappy, especially with those biiiigg images coming from the API. I also used an external library for images to help with performance.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🧘 Flex Those Flexbox Muscles
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The cards alignments with each other is crazy important to me. I used flexbox here to make sure the card heights matched each other, as well as having consistent image sizes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 👗 Dressed in Sass
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I challenged myself with mixins and a directory structure that's ready to scale.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+### 👋 Thanks for Checking This Out!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# AirTank National Park
+I appreciate you taking the time to look at my code and project. I had a blast building this, and I'm super excited about the idea of coding with the AirTank team.
