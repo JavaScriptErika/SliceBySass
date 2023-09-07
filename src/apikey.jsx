@@ -1,3 +1,0 @@
-const NATIONAL_PARK_API_KEY = 'P1KCsCrj5zsHxWBwHpS3YCSbM088LFewJSUsYvn8';
-
-export default NATIONAL_PARK_API_KEY;

@@ -1,9 +1,0 @@
-@use '../abstracts/index' as *;
-
-.banner {
-    @include bg-style($darkGreen, $white);
-    h2 {
-        @include font-style($heading-font, 2.5rem, $white);
-        font-weight: 900;
-    }
-}

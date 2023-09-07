@@ -2,12 +2,12 @@
 @use '../abstracts/colors.scss';
 @use '../abstracts/fonts.scss';
 
-$body-bg: colors.$offWhite;
-$body-color: colors.$brown;
+// $body-bg: colors.$offWhite;
+// $body-color: colors.$brown;
 
-$font-family-base: fonts.$default-font;
+// $font-family-base: fonts.$default-font;
 
-$paragraph-margin-bottom: 0rem;
+// $paragraph-margin-bottom: 0rem;
 
 /* import bootstrap here to set changes */
 @import '~bootstrap/scss/bootstrap';
