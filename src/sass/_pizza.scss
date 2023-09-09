@@ -1,0 +1,43 @@
+$crust: #d57c30;
+$darkBrown: #51220e;
+$cheese: #febb2f;
+$sauce: #fa4424;
+
+
+@mixin pizzaSliceDimensions($pizzaWidth) {
+    $pizzaHeight: $pizzaWidth;
+
+    @if ($pizzaWidth < 20 ){
+        $pizzaHeight: $pizzaWidth + 5;
+    } @else {
+        $pizzaHeight: $pizzaWidth + 10;
+    }
+
+    width: $pizzaWidth;
+    height: $pizzaHeight;
+}
+
+.pizza-base {
+    @include pizzaSliceDimensions(15rem);
+    margin-top: 3rem;
+    position: relative;
+    border-radius: 100%;
+    background: $darkBrown;
+    clip-path: polygon(100% -5%, 50% 55%, 0 0);
+
+
+    // &::after {
+    //     content: ' ';
+    //     position: absolute;
+    //     // z-index: 1;
+    //     // background-color: orange;
+    //     width: 100%;
+    //     height: 100%;
+    //     border-radius: 50%;
+    //     top:0%;
+    //     background-color: $cheese; 
+    //     margin-top: 1rem;;
+    //     border-top: 2px solid $darkBrown;
+    // }
+
+}
