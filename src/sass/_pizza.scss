@@ -1,43 +1,94 @@
-$crust: #d57c30;
+$crust: #fd8630;
+$crustHighlight: #fdc296;
+$crustShadow: #c86823;
+
 $darkBrown: #51220e;
 $cheese: #febb2f;
-$sauce: #fa4424;
+$sauce: #d93c1f;
 
 
-@mixin pizzaSliceDimensions($pizzaWidth) {
-    $pizzaHeight: $pizzaWidth;
+@mixin pizzaSliceDimensions($pizzaSize) {
 
-    @if ($pizzaWidth < 20 ){
-        $pizzaHeight: $pizzaWidth + 5;
-    } @else {
-        $pizzaHeight: $pizzaWidth + 10;
-    }
-
-    width: $pizzaWidth;
-    height: $pizzaHeight;
+    width: $pizzaSize;
+    height: $pizzaSize;
 }
 
-.pizza-base {
+.pizza-box {
     @include pizzaSliceDimensions(15rem);
     margin-top: 3rem;
     position: relative;
     border-radius: 100%;
-    background: $darkBrown;
-    clip-path: polygon(100% -5%, 50% 55%, 0 0);
+    // background:
+    // linear-gradient(
+    //   to top,
+    // rgba(#EFD19F,.08) 1%,
+    //   rgba(gold,.0) 5%,
+    // )
+    // background: linear-gradient(to left, #EFD19F 0%, $crust 50%, #EFD19F 100%);
+    // border-top: 2px solid $darkBrown;
+    clip-path: polygon(85% 0%, 50% 90%, 15% 0%);
+    border: .2rem solid $crustHighlight;
 
+    .crust {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-color: $crust;
+        box-shadow: inset 0px 0rem 0px .5rem  transparentize($crustShadow, .8);
+    }
 
-    // &::after {
-    //     content: ' ';
+    .base {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        margin: auto;
+        width: 90%;
+        height: 90%;
+        border-radius: inherit;
+        background-color: $sauce; 
+        // border: .4rem solid $crustShadow;
+    }
+
+    .toppings-container {
+        position: absolute;
+        display: block;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width:  95%;
+        height: 95%;
+        border-radius: 100%;
+        background: $cheese;
+        mask: 
+            radial-gradient(1.57rem at 50% 2.10rem,#000 99%,#0000 101%) calc(50% - 1.4rem) 0/2.8rem 100%,
+            radial-gradient(1.57rem at 50% -1.4rem,#0000 99%,#000 101%) 50% .7rem/2.8rem 100% repeat-x;
+    }
+ 
+
+    // .cheese{
     //     position: absolute;
-    //     // z-index: 1;
+    //     top: 0;
+    //     left: 20%;
+    //     width:  3rem;
+    //     height: 3rem;
+    //     background-color: transparentize($cheese, .2); 
+    //     margin-top: 1rem;
+    // }
+
+    // .crust {
+    //     position: absolute;
+    //     z-index: 1;
     //     // background-color: orange;
+    //     box-shadow: 2px 0px 0px 20px #EFD19F;
     //     width: 100%;
     //     height: 100%;
     //     border-radius: 50%;
     //     top:0%;
-    //     background-color: $cheese; 
-    //     margin-top: 1rem;;
-    //     border-top: 2px solid $darkBrown;
+    //     background-color: transparent;
     // }
-
 }
